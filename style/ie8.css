@@ -1,0 +1,8 @@
+.menu {
+	background-image: url(../image/ie8-blue-shadow.png);
+}
+
+.main-screen {
+	background-image: url(../image/ie8-shadow.png);
+	z-index: 1000;
+}
