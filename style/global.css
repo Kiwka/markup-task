@@ -52,6 +52,7 @@
 body {
 	background-image: url(../image/background1.png);
 	background-size: 100%;
+	background-repeat: no-repeat;
 	margin: 0px;
 	font-size:14px;
 }
@@ -83,14 +84,24 @@ body {
 @media (max-width: 784px) {
    body { font-size: 7px; }
 }
+
+@media (max-width: 500px) {
+   body { background-image: none; }
+}
+
+.background {
+
+}
+
 /* menu style */
 .menu {
-	background: rgba(0, 75, 142, 0.7);
+	background-color: rgba(0, 75, 142, 0.7);
 	color: #fff;
 	height: 43px;
 	line-height: 43px;
 	padding: 0 6.7%;
 	font-size: 1.05em;
+	display: block;
 }
 
 .menu__logo {
@@ -154,6 +165,46 @@ body {
 	content: '\e801';
 }
 
+/* Images for mobile top menu */
+.JourneyBar__logo-small { display: none;}
+.menu__logo-mobile { display: none;}
+.menu__items { display: none;}
+
+@media (max-width: 500px) {
+	.menu {	
+		background-color: white;
+		height: 6.8em;
+		line-height: 6.8em;
+		}
+	.menu__user { display: none; }
+	.menu__search { display: none; }
+	.menu__item { display: none; }
+	.menu__logo { display: none; }
+
+	.JourneyBar__logo-small {
+		display: inline-block;
+		width: 50px;
+		border-right: 1px gray solid;
+		height: 6.8em;
+	}
+
+	.JourneyBar__logo-small img {
+		position: relative;
+		margin-top: 2em ;
+	}
+
+	.menu__logo-mobile {
+		display: inline-block;
+	}
+	
+	.menu__items {
+		border-left: 1px gray solid;
+		display: inline-block;
+		width: 50px;
+		float: right;
+	}
+}
+
 /* JourneyBar style */
 .JourneyBar {
 	width: 100%;
@@ -174,6 +225,7 @@ body {
 	text-align: center;
 	line-height: 6.8em;
 	float: left;
+	box-sizing: border-box;
 }
 
 .JourneyBar__logo img {
@@ -186,13 +238,13 @@ body {
 	text-align: center;
 	border-right: 1px gray solid;
 	float: left;
+	box-sizing: border-box;
 }
 
 .JourneyBar__item__name {
 	font-family: Open Sans, sans-serif;
 	font-size: 1.05em;
 }
-
 
 .JourneyBar__item__option {
 	font-family: League Gothic, sans-serif;
@@ -245,9 +297,70 @@ body {
 	width: 80%;
 	margin: 0 auto;
 	top: 25%;
+	box-sizing: border-box;
 }
 
-/* For IE 8 support - shadows*/
+
+@media (max-width: 500px) {
+	.JourneyBar {
+		overflow: auto;
+		height: 13.6em;
+		text-transform: none;
+	}
+
+	.JourneyBar__item {
+		width:25%;
+		height: 6.8em;
+		border-top: 1px gray solid;
+	}
+
+	.JourneyBar__logo {
+		margin: 0;
+		display: none;
+		position: absolute;
+		top: 0px;
+		left: 0px;
+		background-color: white;
+		border-left: none;
+		border-right: none;
+	}
+
+	.JourneyBar__from {
+		width: 50%;
+		margin: 0px;
+	}
+
+	.JourneyBar__to {
+		width: 50%;
+		margin: 0px
+	}
+
+	.JourneyBar__to:after {
+		content: "";
+		clear: both;
+	}
+
+	.JourneyBar__from .JourneyBar__item__name {
+		display:none;
+	}
+
+	.JourneyBar__to .JourneyBar__item__name {
+		display:none;
+	}
+
+
+	.JourneyBar__item__arrow {
+		display:none;
+	}
+
+	.JourneyBar__search-button {
+		width: 100%;
+		top: 0;
+		height: 100%;
+		font-size: 5.3em;
+		text-transform: uppercase;
+	}
+}
 
 /* main-scren style */
 .main-screen {
@@ -255,7 +368,7 @@ body {
 	position:absolute;
 	height: 100%;
 	width: 100%;
-	float: center;
+	/* float: center; */
 	text-align: center;
 	vertical-align: top;
 	font-family: "Open Sans";
@@ -284,8 +397,8 @@ body {
 .main-screen__button {
 	position: relative;
 	width: 30%;
-	height: 48px;
-	line-height: 48px;
+	height: 3.42em;
+	line-height: 3.42em;
 	margin: 0 auto;
 	background-color: #ffb900;
 	display: block;
@@ -305,6 +418,28 @@ body {
 	width: 1em;
 	text-align: center;
 	content: '\e802';
+}
+
+@media (max-width: 500px) {
+	.main-screen {
+		text-align: left;
+		background-image: url(../image/background1.png);
+		background-size: 100%;
+	}
+
+	.main-screen__content {
+		display: none;
+	}
+	.main-screen__button {
+		margin: 0;
+		color: #ffb900;
+		background-color: transparent;
+		line-height: 2em;
+		width: 70%;
+	}
+	.main-screen__button:after {
+		text-align: none
+	}
 }
 
 
@@ -331,4 +466,10 @@ body {
 	height: 16px;
 	width: 16px;
 	border: 1px rgba(51, 51, 51, 0.2) solid;
+}
+
+@media (max-width: 500px) {
+	.dot4 {
+		display:none;
+	}
 }
