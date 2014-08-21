@@ -57,41 +57,6 @@ body {
 	font-size:14px;
 }
 
-@media (max-width: 1200px) {
-   body { font-size: 13px; }
-}
-
-@media (max-width: 1130px) {
-   body { font-size: 12px; }
-}
-
-@media (max-width: 1070px) {
-   body { font-size: 11px; }
-}
-
-@media (max-width: 1016px) {
-   body { font-size: 10px; }
-}
-
-@media (max-width: 953px) {
-   body { font-size: 9px; }
-}
-
-@media (max-width: 836px) {
-   body { font-size: 8px; }
-}
-
-@media (max-width: 784px) {
-   body { font-size: 7px; }
-}
-
-@media (max-width: 500px) {
-   body { background-image: none; }
-}
-
-.background {
-
-}
 
 /* menu style */
 .menu {
@@ -158,8 +123,6 @@ body {
 	font-weight: normal;
 	display: inline-block;
 	text-decoration: inherit;
-	width: 1em;
-	margin-right: 10px;
 	margin-left: 10px;
 	text-align: center;
 	content: '\e801';
@@ -170,40 +133,6 @@ body {
 .menu__logo-mobile { display: none;}
 .menu__items { display: none;}
 
-@media (max-width: 500px) {
-	.menu {	
-		background-color: white;
-		height: 6.8em;
-		line-height: 6.8em;
-		}
-	.menu__user { display: none; }
-	.menu__search { display: none; }
-	.menu__item { display: none; }
-	.menu__logo { display: none; }
-
-	.JourneyBar__logo-small {
-		display: inline-block;
-		width: 50px;
-		border-right: 1px gray solid;
-		height: 6.8em;
-	}
-
-	.JourneyBar__logo-small img {
-		position: relative;
-		margin-top: 2em ;
-	}
-
-	.menu__logo-mobile {
-		display: inline-block;
-	}
-	
-	.menu__items {
-		border-left: 1px gray solid;
-		display: inline-block;
-		width: 50px;
-		float: right;
-	}
-}
 
 /* JourneyBar style */
 .JourneyBar {
@@ -211,19 +140,18 @@ body {
 	background: white;
 	color: #094798;
 	text-transform: uppercase;
-	height: 6.8em;
+	height: 90px;
 	box-shadow: 0px 70px 100px -20px #000;
 }
 
 .JourneyBar__logo{
 	position: relative;
+	height: 100%;
 	margin-left: 6.7%;
-	height: 6.8em;
 	border-left: 1px gray solid;
 	border-right: 1px gray solid;
 	width: 7.81%;
 	text-align: center;
-	line-height: 6.8em;
 	float: left;
 	box-sizing: border-box;
 }
@@ -237,6 +165,7 @@ body {
 	display: inline-block;
 	text-align: center;
 	border-right: 1px gray solid;
+	height: 100%;
 	float: left;
 	box-sizing: border-box;
 }
@@ -255,7 +184,7 @@ body {
 	font-family: "fontello";
 	font-style: normal;
 	font-weight: normal;
-	display: inline-block;
+	display: inline;
 	text-decoration: inherit;
 	font-size: 1.4em;
 	text-align: center;
@@ -284,7 +213,8 @@ body {
 
 .JourneyBar__search {
 	width: 10.3%;
-	height: 6.8em;
+	height: 100%;
+	margin-right: 0;
 }
 
 .JourneyBar__search-button {
@@ -298,68 +228,6 @@ body {
 	margin: 0 auto;
 	top: 25%;
 	box-sizing: border-box;
-}
-
-
-@media (max-width: 500px) {
-	.JourneyBar {
-		overflow: auto;
-		height: 13.6em;
-		text-transform: none;
-	}
-
-	.JourneyBar__item {
-		width:25%;
-		height: 6.8em;
-		border-top: 1px gray solid;
-	}
-
-	.JourneyBar__logo {
-		margin: 0;
-		display: none;
-		position: absolute;
-		top: 0px;
-		left: 0px;
-		background-color: white;
-		border-left: none;
-		border-right: none;
-	}
-
-	.JourneyBar__from {
-		width: 50%;
-		margin: 0px;
-	}
-
-	.JourneyBar__to {
-		width: 50%;
-		margin: 0px
-	}
-
-	.JourneyBar__to:after {
-		content: "";
-		clear: both;
-	}
-
-	.JourneyBar__from .JourneyBar__item__name {
-		display:none;
-	}
-
-	.JourneyBar__to .JourneyBar__item__name {
-		display:none;
-	}
-
-
-	.JourneyBar__item__arrow {
-		display:none;
-	}
-
-	.JourneyBar__search-button {
-		width: 100%;
-		top: 0;
-		height: 100%;
-		font-size: 5.3em;
-		text-transform: uppercase;
-	}
 }
 
 /* main-scren style */
@@ -420,32 +288,8 @@ body {
 	content: '\e802';
 }
 
-@media (max-width: 500px) {
-	.main-screen {
-		text-align: left;
-		background-image: url(../image/background1.png);
-		background-size: 100%;
-	}
-
-	.main-screen__content {
-		display: none;
-	}
-	.main-screen__button {
-		margin: 0;
-		color: #ffb900;
-		background-color: transparent;
-		line-height: 2em;
-		width: 70%;
-	}
-	.main-screen__button:after {
-		text-align: none
-	}
-}
-
-
 /* dots style*/
 .dots{
-	vertical-align: bottom;
 	float: right;
 	margin-right: 6.7%;
 	margin-top: 50px 
@@ -466,10 +310,4 @@ body {
 	height: 16px;
 	width: 16px;
 	border: 1px rgba(51, 51, 51, 0.2) solid;
-}
-
-@media (max-width: 500px) {
-	.dot4 {
-		display:none;
-	}
 }

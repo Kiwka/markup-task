@@ -1,0 +1,258 @@
+/* Resizing font on the web page*/
+
+@media screen and (max-width: 1200px) {
+   body { font-size: 13px; }
+}
+
+@media screen and (max-width: 1130px) {
+   body { font-size: 12px; }
+}
+
+@media screen and (max-width: 1070px) {
+   body { font-size: 11px; }
+   .JourneyBar {
+   	height: 70px;
+   }
+}
+
+@media screen and (max-width: 900px) {
+   body { font-size: 10px; }
+}
+
+@media screen and (max-width: 715px) {
+   body { font-size: 9px; }
+}
+
+@media screen and (max-width: 600px) {
+	body {
+		font-size: 7px;
+	}
+}
+
+/* Changing separate elements on the page */
+
+@media screen and (max-width: 960px) {
+	/* Working with JourneyBar */
+	.menu {
+		padding: 0px;
+	}
+
+	.JourneyBar__logo {
+		margin-left: 0px;
+		width: 10%;
+	}
+
+	.JourneyBar__item {
+		width: 10%;
+		margin: 0;
+	}
+
+	.JourneyBar__from {
+		width: 25%;
+	}
+
+	.JourneyBar__to {
+		width: 25%;
+	}
+}
+
+@media screen and (max-width: 651px) {
+
+	.menu__user:after {
+		content: "";
+	}
+
+	.JourneyBar__logo {
+		display: none;
+	}
+
+	.JourneyBar__item {
+		width: 12%;
+	}
+
+	.JourneyBar__from {
+		width: 26%;
+	}
+
+	.JourneyBar__to {
+		width: 26%;
+	}
+
+	.main-screen__header {
+		position: relative;
+		text-align: left;
+		vertical-align: bottom;
+		font-size: 4em;
+		margin-left: 10px;
+		top: 110px;
+	}
+
+	.main-screen__content {
+		display: none;
+	}
+	.main-screen__button {
+		position: relative;
+		top: 90px;
+		color: #ffb900;
+		background-color: transparent;
+		text-align: left;
+		width: 100%;
+		margin-left: 10px;
+	}
+	.main-screen__button:after {
+		text-align: none
+	}
+}
+
+
+@media screen and (max-width: 540px) {
+	body {
+		background-image: none;
+		font-size: 9px;
+	}
+
+	.menu {	
+		background-color: white;
+		height: 61px;
+		line-height: 61px;
+		}
+	.menu__user { display: none; }
+	.menu__search { display: none; }
+	.menu__item { display: none; }
+	.menu__logo { display: none; }
+
+	.menu__logo-mobile {
+		position: relative;
+		display: inline-block;
+		text-align: center;
+		width: 70%;
+		float: left;
+		height: 61px;
+	}
+
+	.menu__logo-mobile img {
+		position: relative;
+		margin-top: 18px;
+	}
+	
+	.menu__items {
+		position: relative;
+		border-left: 1px gray solid;
+		display: inline-block;
+		width: 15%;
+		float: left;
+		text-align: center;
+		box-sizing: border-box;
+	}
+
+	.menu__items img {
+		position: relative;
+		top: 6px;
+	}
+
+	.JourneyBar__logo-small {
+		display: inline-block;
+		width: 15%;
+		border-right: 1px gray solid;
+		height: 61px;
+		float: left;
+		text-align: center;
+		box-sizing: border-box;
+	}
+
+	.JourneyBar__logo-small img {
+		position: relative;
+		margin-top: 18px;
+	}
+
+	.JourneyBar__logo-small:after {
+		font-family: "fontello";
+		font-style: normal;
+		display: inline-block;
+		color: #094798;
+		font-weight: normal;
+		content: ' \e803';
+		vertical-align: middle;
+	}
+
+	.JourneyBar {
+		overflow: auto;
+		height: 13.6em;
+		text-transform: none;
+	}
+
+	.JourneyBar__item {
+		width:25%;
+		height: 61px;
+		border-top: 1px gray solid;
+	}
+
+	.JourneyBar__from {
+		width: 50%;
+		margin: 0px;
+		padding-top: 1.2em;
+	}
+
+	.JourneyBar__item__from-text:after {
+		font-family: "fontello";
+		font-style: normal;
+		display: inline;
+		font-weight: normal;
+		content: '  \e802';
+		font-size: 0.7em;
+	}
+
+	.JourneyBar__to {
+		width: 50%;
+		margin: 0px;
+		padding-top: 1.2em;
+	}
+
+	.JourneyBar__item__to-text:after {
+		font-family: "fontello";
+		font-style: normal;
+		display: inline;
+		font-weight: normal;
+		content: '  \e802';
+		font-size: 0.7em;
+	}
+
+
+	.JourneyBar__from .JourneyBar__item__name {
+		display:none;
+	}
+
+	.JourneyBar__to .JourneyBar__item__name {
+		display:none;
+	}
+
+
+	.JourneyBar__item__arrow {
+		display:none;
+	}
+
+	.JourneyBar__search-button {
+		width: 100%;
+		top: 0;
+		height: 100%;
+		font-size: 5.3em;
+		text-transform: uppercase;
+	}
+	
+	.main-screen {
+		background-image: url(../image/background1.png);
+		background-size: 100%;
+		background-repeat: no-repeat;
+	}
+
+	.dot4 {
+		display:none;
+	}
+}
+
+
+@media screen and (max-width: 390px) {
+	.main-screen__header {
+		font-size: 3em;
+	}
+}
